@@ -48,13 +48,13 @@ bool spPlay( string cmd ){
           Emily.fnDispLine( MSG_GAME_OVER ) ;
           Emily.fnDispLine( MSG_GREET_END ) ;
           result = false ;
-     }else if( Louise.isEqual( lowerCmd, "battle" ) || Louise.isEqual( lowerCmd, "b" ) ){
+     } else if( Louise.isEqual( lowerCmd, "battle" ) || Louise.isEqual( lowerCmd, "b" ) ){
           result = spBattle() ;
-     }else if( Louise.isEqual( lowerCmd, "item" ) || Louise.isEqual( lowerCmd, "i" ) ){
+     } else if( Louise.isEqual( lowerCmd, "item" ) || Louise.isEqual( lowerCmd, "i" ) ){
           result = spUseItem() ;
-     }else if( Louise.isEqual( lowerCmd, "status" ) || Louise.isEqual( lowerCmd, "s" ) ){
+     } else if( Louise.isEqual( lowerCmd, "status" ) || Louise.isEqual( lowerCmd, "s" ) ){
           result = spCheckStatus() ;
-     }else{
+     } else {
           spError( MSG_ERR_CMD ) ;
           spClearBackLine( 3 ) ;
           result = true ;
@@ -94,7 +94,7 @@ bool spBattleMain( void ){
      player.partyFlg = true ;
      if( player.partyFlg ){
           player.rate = spDispSkill( player.skills ) ;
-     }else{
+     } else {
           player.rate = 1 ;
      }
 
@@ -374,19 +374,19 @@ void spDispAnimationRandom( char c ){
           }
           if( num < 100 ){
                line = 100 ;
-          }else if( 100 <= num && num < 200 ){
+          } else if( 100 <= num && num < 200 ){
                line = 200 ;
-          }else if( 200 <= num && num < 300 ){
+          } else if( 200 <= num && num < 300 ){
                line = 300 ;
-          }else if( 300 <= num && num < 400 ){
+          } else if( 300 <= num && num < 400 ){
                line = 400 ;
-          }else if( 400 <= num && num < 500 ){
+          } else if( 400 <= num && num < 500 ){
                line = 500 ;
-          }else if( 500 <= num && num < 600 ){
+          } else if( 500 <= num && num < 600 ){
                line = 600 ;
-          }else if( 600 <= num && num < 700 ){
+          } else if( 600 <= num && num < 700 ){
                line = 700 ;
-          }else if( 700 <= num && num < 800 ){
+          } else if( 700 <= num && num < 800 ){
                line = 800 ;
           }
           if( zero[line] != SPACE ){
@@ -407,7 +407,7 @@ void spDispAnimationRandom( char c ){
           if( tmpFlag ){
                tmpFlag = false ;
                zero[line] = c ;
-          }else{
+          } else {
                zero[line] = SPACE ;
           }
      }
