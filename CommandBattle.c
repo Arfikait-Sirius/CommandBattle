@@ -103,7 +103,7 @@ bool spBattleMain( void ){
           return false ;
      }
      s = Dorothy.fnReadLine( srcf ) ;
-     info = Louise.fnCopy( s ) ;
+     info = Louise.fnFix( s ) ;
      Dorothy.fnClose( srcf ) ;
 
      target = spGetTargetInfo( info ) ;
@@ -140,20 +140,20 @@ Target spGetTargetInfo( string info ){
      string point ;
 
      tmp = Louise.fnGetSubstring( info, "N=%s+" ) ;
-     target.name = Louise.fnCopy( tmp ) ;
+     target.name = Louise.fnFix( tmp ) ;
 
      tmp = Louise.fnGetSubstring( info, "A=%s+" ) ;
-     target.mp = Louise.fnCopy( tmp ) ;
+     target.mp = Louise.fnFix( tmp ) ;
 
      tmp = Louise.fnGetSubstring( info, "C=%s+" ) ;
-     target.criteria = Louise.fnCopy( tmp ) ;
+     target.criteria = Louise.fnFix( tmp ) ;
 
      tmp = Louise.fnGetSubstring( info, "L=%s+" ) ;
-     point = Louise.fnCopy( tmp ) ;
+     point = Louise.fnFix( tmp ) ;
      target.maxLp = Sylvia.fnStrToNum( point ) ;
 
      tmp = Louise.fnGetSubstring( info, "F=%s+" ) ;
-     point = Louise.fnCopy( tmp ) ;
+     point = Louise.fnFix( tmp ) ;
      target.maxFp = Sylvia.fnStrToNum( point ) ;
 
      return target ;
