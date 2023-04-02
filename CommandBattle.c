@@ -46,7 +46,7 @@ bool spPlay( string cmd ){
      if( Louise.isEqual( lowerCmd, "end" ) || Louise.isEqual( lowerCmd, "e" ) ){
           spClearBackLine( 2 ) ;
           Emily.fnDispLine( MSG_GAME_OVER ) ;
-          Emily.fnDispLine( MSG_GREET_END ) ;
+          Emily.fnDispLine( MSG_GAME_END ) ;
           result = false ;
      } else if( Louise.isEqual( lowerCmd, "battle" ) || Louise.isEqual( lowerCmd, "b" ) ){
           result = spBattle() ;
@@ -117,7 +117,7 @@ bool spBattleMain( void ){
           Emily.fnNewLine() ;
      }
      spNextLine( 2 ) ;
-     Emily.fnGetLine( MSG_GREET_START ) ;
+     Emily.fnGetLine( MSG_BATTLE_START ) ;
      for( i = 0 ; i < 3 ; i++ ){
           result = spBattleAction( player, target, info ) ;
           if( result ){
